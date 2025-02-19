@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Age Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Memory Age Calculator</h1>
+            <button id="darkModeToggle">🌙</button>
+        </header>
+        
+        <p class="intro">Enter a special date to see how much time has passed.</p>
+
+        <div class="form-container">
+            <input type="date" id="memoryDate">
+            <button onclick="calculateMemoryAge()">Calculate</button>
+        </div>
+
+        <div id="result" class="hidden">
+            <h2>Your Memory Timeline</h2>
+            <div class="timeline">
+                <div><strong>Years:</strong> <span id="years"></span></div>
+                <div><strong>Months:</strong> <span id="months"></span></div>
+                <div><strong>Days:</strong> <span id="days"></span></div>
+                <div><strong>Hours:</strong> <span id="hours"></span></div>
+                <div><strong>Minutes:</strong> <span id="minutes"></span></div>
+                <div><strong>Seconds:</strong> <span id="seconds"></span></div>
+            </div>
+
+            <div class="countdown">
+                <h3>Next Anniversary Countdown:</h3>
+                <p id="countdownTimer"></p>
+            </div>
+
+            <div class="share-section">
+                <button onclick="generateMemoryCard()">Generate Memory Card</button>
+            </div>
+        </div>
+
+        <div id="memoryCard" class="memory-card hidden">
+            <h3>Memory Card</h3>
+            <p id="memoryText"></p>
+            <button onclick="shareMemory()">Share</button>
+        </div>
+    </div>
+
+</body>
+</html>
